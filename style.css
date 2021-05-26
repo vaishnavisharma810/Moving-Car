@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(bg2.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    background-size:contain;
+    
+}
+.car{
+    height: 80px;
+    width: 280px;
+    background-image: url(carwithoutwheel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 200px;
+    bottom: 100px;
+    animation: carmove linear 0.1s infinite;
+    animation: carshake linear 1s infinite;
+}
+.wheel1 img{
+    width: 46px;
+    position: relative;
+    top: 58px;
+    left: 27px;
+    animation: wheelrotation linear .6s infinite;
+}
+.wheel2 img{
+    width: 46px;
+    position: relative;
+    top: 10px;
+    left: 198px;
+    animation: wheelrotation linear .6s infinite;
+}
+
+ /* For animation, write @keyframes and then name of animation*/
+ 
+@keyframes wheelrotation 
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carmove {
+    100%
+    {
+        transform: translateX(500px);
+    }
+}
+@keyframes carshake {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
